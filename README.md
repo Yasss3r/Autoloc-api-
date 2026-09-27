@@ -1,14 +1,14 @@
-Structure du projet:
+Project Structure:
 
-Le projet respecte l'arborescence demandée :
-- `tn.esprit.autoloc.domain` : Les 9 entités JPA sans associations (`Vehicule`, `Agence`, `Client`, `Employe`, `Equipement`, `Reservation`, `Contrat`, `Paiement`, `Maintenance`) et les 5 énumérations (`StatutVehicule`, `CategorieVehicule`, `RoleEmploye`, `StatutReservation`, `ModePaiement`).
-- `tn.esprit.autoloc.repository` : Interfaces Spring Data JPA (`VehiculeRepository`).
-- `tn.esprit.autoloc.service` : Couche métier (prévue pour l'Atelier 4).
-- `tn.esprit.autoloc.web.controller` : Contrôleurs REST (prévus pour l'Atelier 5).
-- `tn.esprit.autoloc.web.dto` : Objets de transfert de données / DTO (prévus pour l'Atelier 6).
+The project follows the required directory structure:
 
-Fonctionnalités d'extension:
+tn.esprit.autoloc.domain: The 9 JPA entities without associations (Vehicule, Agence, Client, Employe, Equipement, Reservation, Contrat, Paiement, Maintenance) and the 5 enumerations (StatutVehicule, CategorieVehicule, RoleEmploye, StatutReservation, ModePaiement).
+tn.esprit.autoloc.repository: Spring Data JPA interfaces (VehiculeRepository).
+tn.esprit.autoloc.service: Business logic layer (planned for Workshop 4).
+tn.esprit.autoloc.web.controller: REST controllers (planned for Workshop 5).
+tn.esprit.autoloc.web.dto: Data Transfer Objects / DTOs (planned for Workshop 6).
 
-- **CommandLineRunner** : `DataInitializer` insère automatiquement 3 véhicules de démonstration au démarrage si la table est vide.
-- **Profil `dev`** : Fichier `application-dev.properties` activé par défaut dans `application.properties`.
+Extension Features:
 
+CommandLineRunner: DataInitializer automatically inserts 3 demo vehicles at startup if the table is empty.
+dev Profile: The application-dev.properties file is enabled by default in application.properties.
