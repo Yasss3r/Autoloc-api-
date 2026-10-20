@@ -1,5 +1,6 @@
 package tn.esprit.autoloc.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -32,12 +33,15 @@ public class Reservation {
 
     @ManyToOne
     @JoinColumn(name = "id_vehicule")
+    @JsonIgnoreProperties({"reservations", "maintenances"})
     private Vehicule vehicule;
 
     @ManyToOne
     @JoinColumn(name = "id_client")
+    @JsonIgnoreProperties("reservations")
     private Client client;
 
     @OneToOne(mappedBy = "reservation")
+    @JsonIgnoreProperties("reservation")
     private Contrat contrat;
 }
